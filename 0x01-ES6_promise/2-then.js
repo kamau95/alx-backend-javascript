@@ -1,3 +1,4 @@
+/*
 export default function handleResponseFromAPI(promise) {
   // eslint-disable-next-line no-unused-vars
   const goodObject = {
@@ -13,4 +14,11 @@ export default function handleResponseFromAPI(promise) {
       console.log('Got a response from the API');
       return error;
     });
+}
+*/
+export default function handleResponseFromAPI(promise) {
+  return promise
+    .then(() => ({ status: 200, body: 'success' }))
+    .catch(() => Error())
+    .finally(() => { console.log('Got a response from the API'); });
 }

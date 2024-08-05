@@ -6,4 +6,4 @@ export default function initializeRooms() {
   const obj3 = new ClassRoom(34);
   const classes = [obj1, obj2, obj3];
   return classes;
-  }
+}

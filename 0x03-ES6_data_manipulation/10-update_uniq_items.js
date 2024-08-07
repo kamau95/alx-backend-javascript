@@ -1,3 +1,4 @@
+/*
 export default function updateUniqueItems(myMap) {
   for (const [key, value] of myMap) {
     if (value === 1) {
@@ -8,3 +9,17 @@ export default function updateUniqueItems(myMap) {
     }
   }
 }
+*/
+const updateUniqueItems = (map) => {
+  if (map instanceof Map) {
+    for (const [key, value] of map.entries()) {
+      if (value === 1) {
+        map.set(key, 100);
+      }
+    }
+    return map;
+  }
+  throw new Error('Cannot process');
+};
+
+export default updateUniqueItems;

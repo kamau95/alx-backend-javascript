@@ -13,7 +13,7 @@ rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
 });
 */
 
-console.log('Welcome to Holberton School, what is your name?');
+console.log('Welcome to Holberton School, what is your name?\n');
 process.stdin.on('data', (data) => {
   // const message = data.toString().trim();
   const message = data;

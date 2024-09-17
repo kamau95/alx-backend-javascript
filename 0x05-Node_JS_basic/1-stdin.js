@@ -13,11 +13,12 @@ rl.question('Welcome to Holberton School, what is your name?\n', (name) => {
 });
 */
 
-console.log('Welcome to Holberton School, what is your name?\n');
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
+
 process.stdin.on('data', (data) => {
-  // const message = data.toString().trim();
-  const message = data;
-  console.log(`Your name is: ${message}`);
-  console.log('This important software is now closing');
-  process.exit();
+  process.stdout.write(`Your name is: ${data.toString().trim()}\n`);
+  process.stdin.end();
+});
+process.on('exit', () => {
+  process.stdout.write('This important software is now closing\n');
 });
